@@ -7,5 +7,4 @@ let axiosInstance =  axios.create({baseURL:'https://jsonplaceholder.typicode.com
 const getUsers = () => axiosInstance.get('').then(value => value)
 
 let axiosInstance1 =  axios.create({baseURL:'https://jsonplaceholder.typicode.com/posts'});
-const getUserPost = (id) => axiosInstance1.get( + '/' + id).then(value => value.data)
-
+const getUserPost = (id) => axiosInstance1.get( + '/' + id).then(value => value)

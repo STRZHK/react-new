@@ -6,7 +6,7 @@ import {getUsers} from "../../services/user.services";
 export default function Users({getPostId}) {
     let [users, setUsers] = useState([]);
     useEffect(() => {
-            getUsers().then(({data}) => setUsers([...data]))
+            getUsers().then((value) => setUsers([...value.data]))
         }
     ,[])
     return (

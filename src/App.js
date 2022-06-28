@@ -5,7 +5,7 @@ import {getUserPost} from "./services/user.services";
 export default function App() {
     let [posts, setPosts] = useState([]);
     let getPostId = (id) => {
-        getUserPost(id).then((value) => setPosts([...value]))
+        getUserPost(id).then((value) => setPosts([...value.data]))
     }
     return (
         <div>
