@@ -1,8 +1,10 @@
-export default function User({item}) {
+export default function User({item, getPostId}) {
     return (
         <div>
             <h2>{item.id} - {item.name}</h2>
-            <button onClick={}>Posts of the User</button>
+            <button onClick={()=>{
+                getPostId(item.id)
+            }}>User's posts</button>
         </div>
     );
 }

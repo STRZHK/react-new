@@ -1,12 +1,11 @@
 import {useEffect, useState} from "react";
 import User from "../User/User";
-import {getUsers, getUserPost} from "../../services/user.services";
-import Posts from "../Posts/Posts";
+import {getUsers} from "../../services/user.services";
 
-export default function Users() {
+export default function Users({getPostId}) {
     let [users, setUsers] = useState([]);
     useEffect(() => {
-        getUsers().then(value => setUsers([...value]))
+            getUsers().then(({data}) => setUsers([...data]))
         }
     ,[])
     return (
@@ -15,6 +14,7 @@ export default function Users() {
                 users.map(value => <User
                     key={value.id}
                     item={value}
+                    getPostId={getPostId}
                 />)
             }
         </div>
