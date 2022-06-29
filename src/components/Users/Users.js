@@ -3,7 +3,7 @@ import User from "../User/User";
 import {getUsers} from "../../services/user.services";
 
 
-export default function Users({getPostId}) {
+export default function Users({elevate}) {
     let [users, setUsers] = useState([]);
     useEffect(() => {
             getUsers().then((value) => setUsers([...value.data]))
@@ -15,7 +15,7 @@ export default function Users({getPostId}) {
                 users.map(value => <User
                     key={value.id}
                     item={value}
-                    getPostId={getPostId}
+                    elevate={elevate}
                 />)
             }
         </div>
