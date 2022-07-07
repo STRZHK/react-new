@@ -4,7 +4,4 @@ let getAlbums = fetch('https://jsonplaceholder.typicode.com/albums').then(value 
 
 let getComments = fetch('https://jsonplaceholder.typicode.com/comments').then(value => value.json());
 
-let getPosts = fetch('https://jsonplaceholder.typicode.com/posts/{postId}').then(value => value.json());
-
-
-export {getTodos, getAlbums, getComments, getPosts}
+export {getTodos, getAlbums, getComments}
