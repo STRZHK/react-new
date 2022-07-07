@@ -5,7 +5,6 @@ export default function CommentComponent({comment}) {
     return (
         <div>
             <li>{comment.body}</li>
-
             <span><Link to={comment.id.toString()}>related post</Link></span>
         </div>
     )
