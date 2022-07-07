@@ -15,13 +15,16 @@ export default function Comments() {
     },[])
     return (
         <div>
+            <Outlet/>
+            <hr/>
+
             {
                 comments.map(comment=> <CommentComponent
                 key={comment.id}
                 comment={comment}
                 />)
             }
-            <Outlet/>
+
          </div>
     )
 }
