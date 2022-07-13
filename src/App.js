@@ -21,9 +21,7 @@ export default function App() {
                 <Route path={'/todos'} element={<Todos/>}></Route>
                 <Route path={'/albums'} element={<Albums/>}></Route>
                 <Route path={'/comments'} element={<Comments/>}>
-
                     <Route path={':postId'} element={<PostComponent/>}></Route>
-
                 </Route>
             </Routes>
         </div>
