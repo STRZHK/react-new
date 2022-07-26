@@ -12,9 +12,6 @@ const getAll = createAsyncThunk(
     'carSlice/getAll',
     async (_, {rejectWithValue, dispatch, getState}) => {
         try {
-            // dispatch(setCarForUpdate())
-            // const state = getState();
-            // console.log(state);
             const {data} = await carService.getAll();
             return data
         } catch (e) {
@@ -26,7 +23,7 @@ const create = createAsyncThunk(
     'carSlice/create',
     async ({car}, {rejectWithValue})=>{
         try {
-            const {data} = await carService.create({car:car, id:34});
+            const {data} = await carService.create({car:car, id:1});
             return data
         }catch (e){
             return rejectWithValue(e.response.data)
